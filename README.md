@@ -4,20 +4,20 @@
     TCP Server/Client Networking program in Python
 
 ##Using the code
-    **Note:** Code is in Python version 3.4.2
+_**Note:** Code is in Python version 3.4.2_
 The code consists of two Python files, Client.py and Server.py. Each client must be run from a directory containing a server database (serverdb.p), which keeps a list of all servers that the client will attempt to query. Each server must be run from a directory containing a movie database (moviedb.p) and database of valid ports (portdb.p), which stores a list of permitted welcome ports that a server can use. These databases are implemented in the pickle Python module, which I opted for rather than simply including an array in the server file as it allows testing with differing database files, as well as saving/maintaining the database.
 
 Upon starting, a client will print a list of commands with descriptions of their functionality. The client functionality is divided into two sections:
     
 1. Movie requests:
-- Get movie information – “get” 
-- Edit movie information – “edit” 
-- Add movie to database – “add” 
-- Get list of all movies – “all”
+    - Get movie information – “get” 
+    - Edit movie information – “edit” 
+    - Add movie to database – “add” 
+    - Get list of all movies – “all”
 2. Server maintenance:
-- Add new server to list – “addserver”
-- Delete server from list – “deleteserver”
-- Print list of all servers client currently accesses – “serverlist”
+    - Add new server to list – “addserver”
+    - Delete server from list – “deleteserver”
+    - Print list of all servers client currently accesses – “serverlist”
 
 ##The system
 This system is based on the TCP protocol, which I selected for two main reasons: firstly, because the nature of the client requests is single data exchanges (the client sends a request with associated data as a single string and the client then sends a response); secondly, for the reliability that TCP offers – UDP would require more exception handling, should a response not be received from the server for instance.
