@@ -1,4 +1,4 @@
-#TCP-Networking-Assignment
+# TCP-networking-python
 =========================
 
     TCP Server/Client Networking program in Python
